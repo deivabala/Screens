@@ -1,0 +1,99 @@
+1. GetNsgRuleLogs :
+
+InPut : 
+
+{
+"ClientID": 76,
+"ResourcePoolId": "AnuntaWVD",
+"SubscriptionId": "b3e33af0-f770-44b5-82cc-d75aeb75a7d7"
+}
+
+
+Output : 
+
+[
+  {
+    "Name": "Port_ICMP",
+    "PreviousSourceAddress": "10.2.2.2",
+    "PreviousDestinationAddress": "10.2.23.4",
+    "SourceAddress": "NA",
+    "DestinationAddress": "NA",
+    "Priority": "100",
+    "Direction": "Inbound",
+    "CreatedOn": "19 Jul 2020 12:00:12",
+    "UpdatedOn": "21 Jul 2020 10:00:00",
+    "Comments": "Deleted"
+  },
+  {
+    "Name": "Port_3389",
+    "PreviousSourceAddress": "Any",
+    "PreviousDestinationAddress": "10.2.23.4",
+    "SourceAddress": "10.2.2.2",
+    "DestinationAddress": "10.2.23.4",
+    "Priority": "300",
+    "Direction": "Inbound",
+    "CreatedOn": "15 Jul 2020 12:00:12",
+    "UpdatedOn": "21 Jul 2020 14:30:00",
+    "Comments": "Updated successfully"
+  },
+  {
+    "Name": "Port_135",
+    "PreviousSourceAddress": "NA",
+    "PreviousDestinationAddress": "NA",
+    "SourceAddress": "10.2.2.2",
+    "DestinationAddress": "10.2.23.4",
+    "Priority": "300",
+    "Direction": "Inbound",
+    "CreatedOn": "21 Jul 2020 10:00:00",
+    "UpdatedOn": "21 Jul 2020 10:00:00",
+    "Comments": "Created Successfully"
+  }
+]
+
+
+
+
+
+2. GetNsgRuleHistory :
+
+InPut : 
+
+{
+"ClientID": 76,
+"ResourcePoolId": "AnuntaWVD",
+"SubscriptionId": "b3e33af0-f770-44b5-82cc-d75aeb75a7d7",
+"RuleName" : "Port_3389"
+}
+
+
+Output : 
+
+
+[
+  {
+    "SourceAddress": "10.2.2.2",
+    "DestinationAddress": "10.2.23.4",
+    "Priority": "300",
+    "Direction": "Inbound",
+    "UpdatedOn": "21 Jul 2020 14:30:00",
+    "Comments": "Created Successfully"
+  },
+  {
+    "SourceAddress": "Any",
+    "DestinationAddress": "10.2.23.4",
+    "Priority": "300",
+    "Direction": "Inbound",
+    "UpdatedOn": "21 Jul 2020 10:00:00",
+    "Comments": "Deleted"
+  },
+  {
+    "SourceAddress": "10.2.2.2",
+    "DestinationAddress": "Any",
+    "Priority": "300",
+    "Direction": "Inbound",
+    "UpdatedOn": "20 Jul 2020 10:00:00",
+    "Comments": "Updated successfully"
+  }
+]
+
+
